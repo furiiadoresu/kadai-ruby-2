@@ -1,21 +1,29 @@
 # FizzBuzz
 
-def FizzBuzz(num_max)
-  start_num = 1
-  
-  (start_num..num_max).each do |number|
+def fizzbuzz(number)
+
     if number % 3 == 0 && number % 5 == 0
-      puts "FizzBuzz"
+      return "FizzBuzz"
     elsif number % 5 == 0
-      puts "Buzz"
+      return "Buzz"
     elsif number % 3 == 0
-      puts "Fizz"
+      return "Fizz"
     else
-      puts number
+      return number
     end
-  end
 end
 
 
 num_max = 100
-FizzBuzz(num_max)
+start_num = 1
+
+(start_num..num_max).each do |number|
+  puts fizzbuzz(number)
+end
+
+=begin
+puts fizzbuzz(1)
+puts fizzbuzz(3)
+puts fizzbuzz(5)
+puts fizzbuzz(15)
+=end
